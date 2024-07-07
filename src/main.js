@@ -12,7 +12,7 @@ document.querySelector("#app").innerHTML = `
       <nav>
         <div class='nav-container'>
           <a class='nav-logo'>
-            <img alt='Logo do MineResi' src=${logo} />
+            <img alt='Logo' src=${logo} />
           </a>
           <ul>
             <li>
@@ -67,15 +67,14 @@ document.querySelector("#app").innerHTML = `
       <form class="login-form" id="loginForm">
         <div class="input-container">
           <label for="username">Nombre de Usuario</label>
-          <input type="text" id="username" name="username" placeholder="Ingresa tu nombre de usuario" required>
+          <input type="text" id="login-user_id" name="username" placeholder="Ingresa tu nombre de usuario" required>
         </div>
         <div class="input-container">
           <label for="password">Contraseña</label>
-          <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+          <input type="password" id="login-password" name="password" placeholder="Ingresa tu contraseña" required>
         </div>
         <div class="button-container">
           <button type="submit" class="login-button" id="login">Login</button>
-          <button type="button" class="login-button" id="showData">ShowData</button>
           <a href="#close" title="Cerrar" class="close">Cerrar</a>
         </div>
       </form>
@@ -88,7 +87,7 @@ document.querySelector("#app").innerHTML = `
       <form class="register-form" id="registerForm">
         <div class="input-container">
           <label for="register-username">Nombre de Usuario</label>
-          <input type="text" id="register-username" name="register-username" placeholder="Ingresa tu nombre de usuario" required>
+          <input type="text" id="register-user_id" name="register-username" placeholder="Ingresa tu nombre de usuario" required>
         </div>
         <div class="input-container">
           <label for="register-password">Contraseña</label>
