@@ -136,7 +136,7 @@ registerForm.addEventListener('submit', async function (event) {
 
           const data = await response.json();
           console.log('API Response:', data);
-          document.getElementById('dns').innerHTML = requestData.public_dns;
+          document.getElementById('dns').innerHTML = data.public_dns +":25565";
       } catch (error) {
           console.error('Error:', error);
           alert(`Hubo un error al enocntrar el dns`);
@@ -168,11 +168,12 @@ registerForm.addEventListener('submit', async function (event) {
           const data = await response.json();
           console.log('API Response:', data);
           alert(`El servidor se inició correctamente`);
+          setTimeout(get_dns, 60000, user_id)
       } catch (error) {
           const data = await response.json();
           console.error('Error:', error);
           console.log('API Response:', data);
-          //setTimeout(get_dns, 60000, user_id)
+          alert(`Tu estás mal y te voy a decir por qué`);
       }
   }
 
@@ -199,6 +200,7 @@ registerForm.addEventListener('submit', async function (event) {
         const data = await response.json();
         console.log('API Response:', data);
         alert('Instancia eliminada correctamente');
+        document.getElementById('dns').innerHTML = "Aquí va el dns";
     } catch (error) {
         console.error('Error:', error);
         alert('Hubo un error al eliminar la instncia');
@@ -227,10 +229,11 @@ async function stopInstance() {
 
       const data = await response.json();
       console.log('API Response:', data);
-      alert('Instancia eliminada correctamente');
+      alert('Instancia detenida correctamente');
+      document.getElementById('dns').innerHTML = "Aquí va el dns";
   } catch (error) {
       console.error('Error:', error);
-      alert('Hubo un error al eliminar la instncia');
+      alert('Hubo un error al detener la instncia');
   }
 }
 
@@ -257,7 +260,7 @@ async function startInstance() {
       const data = await response.json();
       console.log('API Response:', data);
       alert(`El servidor se inició correctamente`);
-      document.getElementById('dns').innerHTML = requestData.public_dns;
+      setTimeout(get_dns, 60000, user_id)
   } catch (error) {
       console.error('Error:', error);
       alert(`Hubo un error al iniciar el servidor`);

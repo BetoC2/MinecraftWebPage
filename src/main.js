@@ -29,10 +29,10 @@ document.querySelector("#app").innerHTML = `
       </nav>
       <h1 id="welcomeHeader">¡Bienvenido!</h1>
       <div class="server-address-clipboard-icon">
-        <button class="boton crear-instancia" id="crear-instancia">Crear Instancia</button>
-        <button class="boton iniciar-instancia" id="iniciar-instancia">Iniciar Instancia</button>
-        <button class="boton detener-instancia" id="detener-instancia">Detener Instancia</button>
-        <button class="boton borrar-instancia" id="borrar-instancia">Borrar Instancia</button>
+        <button class="boton crear-instancia" id="crear-instancia">Crear Servidor</button>
+        <button class="boton iniciar-instancia" id="iniciar-instancia">Iniciar Servidor</button>
+        <button class="boton detener-instancia" id="detener-instancia">Detener Servidor</button>
+        <button class="boton borrar-instancia" id="borrar-instancia">Borrar Servidor</button>
       </div>
       <div class="server-info">
         <p style="margin: 0px;"></p>
